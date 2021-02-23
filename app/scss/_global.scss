@@ -27,6 +27,9 @@ body {
     overflow-x: hidden;
     position: relative;
     color: $mainColor;
+    @extend %ubuntu-light;
+    font-size: 17px;
+    line-height: 26px;
 }
 .container {
     max-width: 1270px;
@@ -42,7 +45,11 @@ body {
     padding: 0 0 50px;
     
     &__title {
-        font-size: 20px;
+        @extend %sf-regular;
+        font-size: 44px;
+        line-height: 55px;
+        padding-left: 25px;
+        margin-bottom: 55px;
     }
 }
 .scroll-btn {
@@ -57,5 +64,31 @@ body {
         display: block;
         text-indent: -999999px;
         background-size: cover;
+    }
+}
+.btn {
+    background-color: transparent;
+    color: $mainColor;
+    border: 1px solid $mainColor;
+    cursor: pointer;
+    transition: opacity .3s;
+    
+    &:hover {
+        opacity: .7;
+    }
+    
+    &_big {
+        border-radius: 3px;
+        padding: 7px 28px;
+        font-size: 15px;
+        @extend %ubuntu-medium;
+    }
+    
+    &_small {
+        border-radius: 2px;
+        padding: 9px 15px;
+        font-size: 14px;
+        letter-spacing: 2px;
+        @extend %ubuntu-bold;
     }
 }
