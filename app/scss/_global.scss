@@ -22,6 +22,10 @@ h4 {
     padding: 0;
     font-size: inherit;
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
 body {
     min-width: 320px;
     overflow-x: hidden;
@@ -44,6 +48,20 @@ body {
     position: relative;
     padding: 0 0 50px;
     
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(107.54deg, rgba(23, 26, 28, 0.72) 0%, #5E5E57 100%);
+        opacity: 0.15;
+    }
+    &__wrapper {
+        position: relative;
+        z-index: 20;
+    }
     &__title {
         @extend %sf-regular;
         font-size: 44px;
@@ -71,10 +89,11 @@ body {
     color: $mainColor;
     border: 1px solid $mainColor;
     cursor: pointer;
-    transition: opacity .3s;
+    transition: all .3s;
     
     &:hover {
-        opacity: .7;
+        color: $secondaryColor;
+        background-color: $mainColor;
     }
     
     &_big {
@@ -90,5 +109,29 @@ body {
         font-size: 14px;
         letter-spacing: 2px;
         @extend %ubuntu-bold;
+    }
+}
+.social {
+    display: flex;
+    
+    &__link {
+        width: 40px;
+        height: 40px;
+        text-indent: -999999px;
+        display: block;
+        transition: opacity .3s;
+        opacity: .5;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .facebook {
+        background-image: url(../images/facebook.svg);
+    }
+    .youtube {
+        background-image: url(../images/youtube.svg);
+    }
+    .instagram {
+        background-image: url(../images/instagram.svg);
     }
 }

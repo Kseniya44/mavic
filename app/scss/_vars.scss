@@ -1,26 +1,27 @@
 $mainColor: #fff;
+$secondaryColor: #1C1C1C;
 
 %ubuntu-light {
-    font-family: "Ubuntu-Light", sans-serif;
+    font-family: 'Ubuntu-Light';
     font-weight: 300;
 }
 
 %ubuntu-medium {
-    font-family: "Ubuntu-Medium", sans-serif;
+    font-family: 'Ubuntu-Medium';
     font-weight: 500;
 }
 
 %ubuntu-bold {
-    font-family: "Ubuntu-Bold", sans-serif;
+    font-family: 'Ubuntu-Bold';
     font-weight: 700;
 }
 
 %sf-regular {
-    font-family: "SFProDisplay-Regular", sans-serif;
+    font-family: "SFProDisplay-Regular";
     font-weight: 400;
 }
 
 %sf-semibold {
-    font-family: "SFProDisplay-Semibold", sans-serif;
+    font-family: "SFProDisplay-Semibold";
     font-weight: 600;
 }
