@@ -1,0 +1,72 @@
+.products {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 50px;
+        padding-bottom: 48px;
+    }
+    &__text {
+        width: 440px;
+        p {
+            margin-bottom: 30px;
+        }
+    }
+    &__wrapper {
+        position: relative;
+        padding-top: 110px;
+        max-width: 560px;
+        
+    }
+    &__slider {
+        position: relative;
+    }
+    &__slider:before {
+        content: "";
+        border: 4px solid $mainColor;
+        width: 560px;
+        height: 300px;
+        position: absolute;
+        top: -15px;
+        right: -17px;
+        z-index: -1;
+    }
+    &__title {
+        width: 281px;
+        position: absolute;
+        text-align: right;
+        font-size: 24px;
+        @extend %ubuntu-medium;
+        bottom: 30px;
+        left: -200px;
+        z-index: 20;
+    }
+    .slick-arrow {
+        width: 60px;
+        height: 48px;
+        position: absolute;
+        bottom: -41px;
+        border: none;
+        border-radius: 0;
+        outline: none;
+        background-color: $mainColor;
+        svg {
+            stroke: $secondaryColor;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    .slick-next {
+        right: 60px;
+    }
+    .slick-prev{
+        right: 0;
+    }
+    .slick-disabled  {
+        background-color: $secondaryColor;
+        svg {
+            stroke: $mainColor;
+        }
+    }
+    
+    
+}
